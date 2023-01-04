@@ -1,0 +1,14 @@
+.product {
+    width: 30%;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+}
+
+img {
+    height: 200px;
+}
+
+.add-btn {
+    margin: 0 2%;
+}

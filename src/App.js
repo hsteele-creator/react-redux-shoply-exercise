@@ -6,7 +6,6 @@ import Products from './Products';
 function App() {
   return (
    <>
-      <h1>Testing</h1>
       <Products />
     </>
   );
