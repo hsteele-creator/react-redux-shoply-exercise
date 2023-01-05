@@ -12,3 +12,19 @@ img {
 .add-btn {
     margin: 0 2%;
 }
+
+@media only screen and (max-width: 880px) {
+    body {
+      background-color: lightblue;
+    }
+
+    .product {
+        width: 50%;
+        height: 300px;
+        margin: 20px 0;
+    }
+
+    img {
+        height: 100px;
+    }
+  }
