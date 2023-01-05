@@ -5,22 +5,19 @@ import "./Products.css"
 
 const Products = () => {
 
-const store = useSelector(state => state.items);
+const products = useSelector(state => state.products);
 
-const productData = Object.entries(store);
-console.log(productData)
 
 return (
     <>
     <ul>
-    {productData.map(product => 
-    <ProductCard 
-    image={product[1].image_url} 
-    name={product[1].name}
-    price={product[1].price}
-    description={product[1].description}
-    />
-    )}
+    {Object.keys(products).map(id => <ProductCard 
+        image={products[id].image_url} 
+        name={products[id].name}
+        price={products[id].price}
+        description={products[id].description}
+        id={id}
+        />)} 
     </ul>
     </>
 )
