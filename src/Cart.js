@@ -1,6 +1,7 @@
 import React from "react"
 import CartItem from "./CartItem"
 import { useSelector } from "react-redux"
+import "./Cart.css"
 
 const Cart = () => {
 
@@ -9,7 +10,9 @@ const Cart = () => {
 
     return (
         <>
-        <h1>Cart</h1>
+        <h1 id="cart-title">Cart</h1>
+
+        <div id="cart-container">
         {cart.map(product => {
             return <CartItem 
             name={product.name}
@@ -18,6 +21,7 @@ const Cart = () => {
             image={product.image_url}
             />
         })}
+        </div>
         </>
     )
 

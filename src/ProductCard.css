@@ -14,9 +14,6 @@ img {
 }
 
 @media only screen and (max-width: 880px) {
-    body {
-      background-color: lightblue;
-    }
 
     .product {
         width: 50%;
