@@ -10,7 +10,7 @@ const ProductCard = ({id, name, image, price, description}) => {
     const products = useSelector(state => state.products);
 
     const addToCart = (id) => {
-        dispatch({type : "ADD_TO_CART", payload: {id : id}});
+        dispatch({type : "ADD_TO_CART", payload: {id : id, name: name}});
     }
 
     return (

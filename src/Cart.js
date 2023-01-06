@@ -8,6 +8,12 @@ const Cart = () => {
     const cart = useSelector(state => state.cart);
     console.log(cart)
 
+    // if(cart.some(product => product.name === "tv")) {
+    //     console.log("in cart")
+    // } else {
+    //     console.log("not in cart")
+    // }
+
     return (
         <>
         <h1 id="cart-title">Cart</h1>
@@ -19,6 +25,7 @@ const Cart = () => {
             price={product.price}
             description={product.description}
             image={product.image_url}
+            quantity={product.quantity}
             />
         })}
         </div>
