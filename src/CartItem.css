@@ -4,3 +4,8 @@
     text-align: center;
     max-height: 200px;
 }
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,6 +1,17 @@
+body html {
+    margin: 0;
+    padding: 0;
+}
+
+#product-header {
+    text-align: center;
+}
+
 ul {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }

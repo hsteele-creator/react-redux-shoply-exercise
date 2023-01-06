@@ -2,6 +2,7 @@ import React from "react"
 import CartItem from "./CartItem"
 import { useSelector } from "react-redux"
 import "./Cart.css"
+import Nav from "./Nav"
 
 const Cart = () => {
 
@@ -16,6 +17,8 @@ const Cart = () => {
 
     return (
         <>
+
+        <Nav/>
         <h1 id="cart-title">Cart</h1>
 
         <div id="cart-container">

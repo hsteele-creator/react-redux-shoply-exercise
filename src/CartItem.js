@@ -21,14 +21,18 @@ const CartItem = ({name, price, description, image, quantity}) => {
 
     return (
         <div className="cart-item">
-        <h1>{name}</h1>
+        <h2>{name}</h2>
         <img src={image}></img>
         <h2>{price}</h2>
         <p>{description}</p>
         <h3>{quantity}</h3>
+
+        <div id="buttons">
         <button onClick={() => removeFromCart(name)} className="remove-btn">Remove from cart</button>
         <button onClick={() => addToCart(name)}>+</button>
         <button onClick={() => lowerQuantity(name)}>-</button>
+        </div>
+
         </div>
     )
 }
