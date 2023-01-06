@@ -1,6 +1,7 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import "./ProductCard.css"
+import {ADD_TO_CART} from "./ActionTypes"
 
 
 const ProductCard = ({id, name, image, price, description}) => {
@@ -9,7 +10,7 @@ const ProductCard = ({id, name, image, price, description}) => {
 
 
     const addToCart = (id) => {
-        dispatch({type : "ADD_TO_CART", payload: {id : id, name: name}});
+        dispatch({type : ADD_TO_CART, payload: {id : id, name: name}});
     }
 
     return (

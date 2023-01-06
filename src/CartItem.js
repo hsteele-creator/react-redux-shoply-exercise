@@ -1,6 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import "./CartItem.css"
+import { LOWER_QUANTITY, ADD_TO_CART, REMOVE_FROM_CART} from "./ActionTypes"
 
 const CartItem = ({name, price, description, image, quantity}) => {
 
@@ -8,15 +9,15 @@ const CartItem = ({name, price, description, image, quantity}) => {
 
 
     const removeFromCart = (name) => {
-        dispatch({type: "REMOVE_FROM_CART", payload : {name}})
+        dispatch({type: REMOVE_FROM_CART, payload : {name}})
     }
 
     const lowerQuantity = (name) => {
-        dispatch({type: "LOWER_QUANTITY", payload: {name}})
+        dispatch({type: LOWER_QUANTITY, payload: {name}})
     }
 
     const addToCart = (id) => {
-        dispatch({type : "ADD_TO_CART", payload: {id : id, name: name}});
+        dispatch({type : ADD_TO_CART, payload: {id : id, name: name}});
     }
 
     return (
