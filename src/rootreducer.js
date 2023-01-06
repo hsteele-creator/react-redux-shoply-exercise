@@ -24,6 +24,11 @@ const rootReducer = (state = INITIAL_STATE, action) => {
                 ...state, 
                 cart : [...state.cart.filter(product => product.name != action.payload.name)]
             }
+        case("LOWER_QUANTITY"):
+            return {
+                ...state, 
+                cart : [...state.cart.map(product => product.name === action.payload.name ? {...product, quantity : product.quantity - 1} : product)]
+            }       
         default: 
             return state
     }

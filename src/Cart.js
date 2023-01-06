@@ -19,7 +19,7 @@ const Cart = () => {
         <h1 id="cart-title">Cart</h1>
 
         <div id="cart-container">
-        {cart.map(product => {
+        {cart.filter(product => product.quantity != 0).map(product => {
             return <CartItem 
             name={product.name}
             price={product.price}
