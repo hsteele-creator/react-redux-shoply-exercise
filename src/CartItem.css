@@ -1,11 +1,42 @@
 .cart-item {
     width: 30%;
-    align-items: center;
     text-align: center;
-    max-height: 200px;
+    height: 500px;
+    margin: 20px;
 }
 
-#buttons {
+
+/* #buttons {
     display: flex;
     justify-content: space-evenly;
+} */
+
+button {
+    margin: 0 2px;
 }
+
+
+  @media only screen and (max-width: 700px) {
+    .cart-item {
+        width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+
+    .cart-item {
+        width: 50%;
+        margin: 20px 0;
+    }
+
+    img {
+        height: 100px;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .cart-item {
+        width: 30%;
+    }
+  }
+

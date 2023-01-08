@@ -9,17 +9,17 @@ const Cart = () => {
     const cart = useSelector(state => state.cart);
     console.log(cart)
 
-    // if(cart.some(product => product.name === "tv")) {
-    //     console.log("in cart")
-    // } else {
-    //     console.log("not in cart")
-    // }
+    // const total = cart.reduce((curr, next) => {
+    //     return (curr.price * curr.quantity) + (next.price + next.quantity)
+    // })
+
 
     return (
         <>
 
         <Nav/>
         <h1 id="cart-title">Cart</h1>
+
 
         <div id="cart-container">
         {cart.filter(product => product.quantity != 0).map(product => {

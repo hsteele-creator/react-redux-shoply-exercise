@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import "./CartItem.css"
 import { LOWER_QUANTITY, ADD_TO_CART, REMOVE_FROM_CART} from "./ActionTypes"
 
+
 const CartItem = ({name, price, description, image, quantity}) => {
 
     const dispatch = useDispatch();
@@ -24,9 +25,10 @@ const CartItem = ({name, price, description, image, quantity}) => {
         <div className="cart-item">
         <h2>{name}</h2>
         <img src={image}></img>
-        <h2>{price}</h2>
+        <h2>$ {price}</h2>
         <p>{description}</p>
         <h3>{quantity}</h3>
+        <h3>Total : ${price * quantity}</h3>
 
         <div id="buttons">
         <button onClick={() => removeFromCart(name)} className="remove-btn">Remove from cart</button>
