@@ -1,6 +1,6 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import "./ProductCard.css"
+import "./css/ProductCard.css"
 import {ADD_TO_CART} from "./ActionTypes"
 
 

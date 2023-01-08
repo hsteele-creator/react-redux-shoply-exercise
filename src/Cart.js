@@ -1,7 +1,7 @@
 import React from "react"
 import CartItem from "./CartItem"
 import { useSelector } from "react-redux"
-import "./Cart.css"
+import "./css/Cart.css"
 import Nav from "./Nav"
 
 const Cart = () => {

@@ -1,6 +1,6 @@
 import React from "react"
 import { useDispatch } from "react-redux"
-import "./CartItem.css"
+import "./css/CartItem.css"
 import { LOWER_QUANTITY, ADD_TO_CART, REMOVE_FROM_CART} from "./ActionTypes"
 
 
