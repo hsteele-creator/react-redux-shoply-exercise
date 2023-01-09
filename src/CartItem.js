@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import "./css/CartItem.css"
-import { LOWER_QUANTITY, ADD_TO_CART, REMOVE_FROM_CART} from "./ActionTypes"
+import { LOWER_QUANTITY, RAISE_QAUNTITY, REMOVE_FROM_CART} from "./ActionTypes"
 
 
 const CartItem = ({name, price, description, image, quantity}) => {
@@ -17,8 +17,8 @@ const CartItem = ({name, price, description, image, quantity}) => {
         dispatch({type: LOWER_QUANTITY, payload: {name}})
     }
 
-    const addToCart = (id) => {
-        dispatch({type : ADD_TO_CART, payload: {id : id, name: name}});
+    const raiseQuantity = (name) => {
+        dispatch({type : RAISE_QAUNTITY, payload: {name}});
     }
 
     return (
@@ -32,7 +32,7 @@ const CartItem = ({name, price, description, image, quantity}) => {
 
         <div id="buttons">
         <button onClick={() => removeFromCart(name)} className="remove-btn">Remove from cart</button>
-        <button onClick={() => addToCart(name)}>+</button>
+        <button onClick={() => raiseQuantity(name)}>+</button>
         <button onClick={() => lowerQuantity(name)}>-</button>
         </div>
 

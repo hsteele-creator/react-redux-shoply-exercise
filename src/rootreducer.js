@@ -11,12 +11,12 @@ const rootReducer = (state = INITIAL_STATE, action) => {
             if(state.cart.some(product => product.name === action.payload.name)) {
                 return {
                     ...state, 
-                    cart : [...state.cart.map(product => product.name === action.payload.name ? {...product, quantity : product.quantity + 1} : product)]
+                    cart : [...state.cart.map(product => product.name === action.payload.name ? {...product, quantity : product.quantity + action.payload.quantity} : product)]
                 }
             } else {
                 return {
                     ...state,
-                    cart : [...state.cart, data.products[action.payload.id]]
+                    cart : [...state.cart, {...data.products[action.payload.id], quantity : action.payload.quantity}]
                 }
             }
         case("REMOVE_FROM_CART"):
@@ -24,6 +24,11 @@ const rootReducer = (state = INITIAL_STATE, action) => {
                 ...state, 
                 cart : [...state.cart.filter(product => product.name != action.payload.name)]
             }
+        case("RAISE_QAUNTITY"):
+            return {
+                ...state, 
+                cart : [...state.cart.map(product => product.name === action.payload.name ? {...product, quantity : product.quantity + 1} : product)]
+            }    
         case("LOWER_QUANTITY"):
             return {
                 ...state, 
