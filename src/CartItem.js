@@ -28,7 +28,7 @@ const CartItem = ({name, price, description, image, quantity}) => {
         <h2>$ {price}</h2>
         <p>{description}</p>
         <h3>{quantity}</h3>
-        <h3>Total : ${price * quantity}</h3>
+        <h3>Total : ${Math.round(price * quantity)}</h3>
 
         <div id="buttons">
         <button onClick={() => removeFromCart(name)} className="remove-btn">Remove from cart</button>

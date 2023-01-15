@@ -16,10 +16,10 @@ const Cart = () => {
       <h2 id="total">
         Cart Total : $
         {cart.length > 0
-          ? cart.reduce(
+          ? Math.round(cart.reduce(
               (curr, next) =>
                 curr + (next.price * next.quantity), 0
-            )
+            ))
           : 0}
       </h2>
 
