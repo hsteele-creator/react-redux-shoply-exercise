@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import "./css/CartItem.css"
-import { LOWER_QUANTITY, RAISE_QAUNTITY, REMOVE_FROM_CART} from "./ActionTypes"
+import { removeFromCart, raiseQuantity, lowerQuantity } from "./ActionCreators"
 
 
 const CartItem = ({name, price, description, image, quantity}) => {
@@ -9,16 +9,16 @@ const CartItem = ({name, price, description, image, quantity}) => {
     const dispatch = useDispatch();
 
 
-    const removeFromCart = (name) => {
-        dispatch({type: REMOVE_FROM_CART, payload : {name}})
+    const remove = (name) => {
+        dispatch(removeFromCart(name))
     }
 
-    const lowerQuantity = (name) => {
-        dispatch({type: LOWER_QUANTITY, payload: {name}})
+    const lower = (name) => {
+        dispatch(lowerQuantity(name))
     }
 
-    const raiseQuantity = (name) => {
-        dispatch({type : RAISE_QAUNTITY, payload: {name}});
+    const raise = (name) => {
+        dispatch(raiseQuantity(name))
     }
 
     return (
@@ -31,9 +31,9 @@ const CartItem = ({name, price, description, image, quantity}) => {
         <h3>Total : ${Math.round(price * quantity)}</h3>
 
         <div id="buttons">
-        <button onClick={() => removeFromCart(name)} className="remove-btn">Remove from cart</button>
-        <button onClick={() => raiseQuantity(name)}>+</button>
-        <button onClick={() => lowerQuantity(name)}>-</button>
+        <button onClick={() => remove(name)} className="remove-btn">Remove from cart</button>
+        <button onClick={() => raise(name)}>+</button>
+        <button onClick={() => lower(name)}>-</button>
         </div>
 
         </div>

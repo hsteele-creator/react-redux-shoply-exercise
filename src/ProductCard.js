@@ -2,7 +2,7 @@ import React from "react"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import "./css/ProductCard.css"
-import {ADD_TO_CART} from "./ActionTypes"
+import { addToCart} from "./ActionCreators"
 
 
 const ProductCard = ({id, name, image, price, description}) => {
@@ -11,8 +11,8 @@ const ProductCard = ({id, name, image, price, description}) => {
 
     const dispatch = useDispatch();
 
-    const addToCart = () => {
-        dispatch({type : ADD_TO_CART, payload: {id : id, name: name, quantity: quantity}});   
+    const add = () => {
+        dispatch(addToCart(id, name, quantity))
 
         setQuantity(1)
     }
@@ -35,7 +35,7 @@ const ProductCard = ({id, name, image, price, description}) => {
         onChange={(e) => setQuantity(+e.target.value)}
         ></input>
 
-        <button onClick={() => addToCart(id)} className="add-btn">Add to cart</button>
+        <button onClick={() => add(id)} className="add-btn">Add to cart</button>
 
         </div>
 

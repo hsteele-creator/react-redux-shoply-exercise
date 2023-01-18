@@ -40,7 +40,7 @@ const rootReducer = (state = INITIAL_STATE, action) => {
           ),
         ],
       };
-    case "RAISE_QAUNTITY":
+    case "RAISE_QUANTITY":
       return {
         ...state,
         cart: [
