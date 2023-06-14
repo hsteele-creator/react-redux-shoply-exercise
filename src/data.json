@@ -25,7 +25,7 @@
       "name": "chair",
       "price": 100.89,
       "description": "It's a chair. You can sit in it.",
-      "image_url": "https://www.ikea.com/PIAimages/0355482_PE547815_S5.JPG",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8RwqAL1ssNdHakYHbQxv0d67TFGN01_U4llfZor_NvfUDQj-rQ0EWgfx3-k2oZXu0Uis&usqp=CAU",
       "quantity" : 1
     },
     "6a56c22f-2a85-4751-98a9-14e280fcecd8": {
@@ -44,3 +44,5 @@
     }
   }
 }
+
+
